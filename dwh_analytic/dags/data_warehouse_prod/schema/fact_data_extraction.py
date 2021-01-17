@@ -8,6 +8,7 @@ class FactDataExtractionModel:
         project_id: str,
         document_id: str,
         doc_set_id: str,
+        record_id: int = None,
         last_modified_time_key: int,
         last_modified_date_key: int,
         user_name: str = None,
@@ -22,6 +23,7 @@ class FactDataExtractionModel:
         self.project_id = project_id
         self.document_id = document_id
         self.doc_set_id = doc_set_id
+        self.record_id = record_id
         self.last_modified_time_key = last_modified_time_key
         self.last_modified_date_key = last_modified_date_key
         self.user_name = user_name

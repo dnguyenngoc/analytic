@@ -1,10 +1,12 @@
+import time
 import pickle
-from dags.data_warehouse_prod.schema.fact_etl_report import FactEtlReportModel
 import datetime
 from dateutil import tz
 import pendulum
+from dags.data_warehouse_prod.schema.fact_etl_report import FactEtlReportModel
 from dags.data_warehouse_prod.functions import function as func
-import time
+from dags.data_warehouse_prod.functions.db_connect import EngineConnect as DatabaseConnect
+
 
 def initial_report(name: str, project_id: str, schedule_type: str, schedule_date_key: int, schedule_time_key: int):
     to_zone = tz.gettz('Asia/Ho_Chi_Minh')
@@ -23,3 +25,6 @@ def initial_report(name: str, project_id: str, schedule_type: str, schedule_date
         schedule_time_key = schedule_time_key
     )
     return report
+
+def upload_report(reports: list, schema: str, table: str, db: DatabaseConnect):
+    db.create(reports, schema, table)
