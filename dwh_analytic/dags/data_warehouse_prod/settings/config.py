@@ -76,19 +76,6 @@ DWH_FACT_REPORT_ETL_TABLE = 'fact_etl_report'
 DWH_MART_PNL_SUMMARY_TABLE = 'pnl_summary'
 DWH_MART_PNL_TARGET_TABLE = 'pnl_target'
 
-# # ECLAIM TABLE
-# DWH_DIM_FIELD_ECLAIMS_TABLE = 'dim_field_' + ECLAIMS_PROJECT_ID
-# DWH_DIM_REMARK_ECLAIMS_TABLE = 'dim_remark_' + ECLAIMS_PROJECT_ID
-# DWH_DIM_WORKING_TIME_ECLAIMS_TABLE = 'dim_working_time_' + ECLAIMS_PROJECT_ID
-# DWH_FACT_ACCURACY_ECLAIMS_TABLE = 'fact_accuracy_' + ECLAIMS_PROJECT_ID
-# DWH_FACT_DOCUMENT_ECLAIMS_TABLE = 'fact_document_' + ECLAIMS_PROJECT_ID
-# DWH_FACT_PROCESS_ECLAIMS_TABLE = 'fact_process_' + ECLAIMS_PROJECT_ID
-
-
-
-
-
-
 
 #==================================================================================================================================
 #                                                                                                                     [DWH PROJECT]
@@ -98,6 +85,22 @@ DWH_MART_PNL_TARGET_TABLE = 'pnl_target'
 # [ GDA VARIABLE ]
 GDA_PROJECT_ID = '5e9e7ec598d753001b7efe6b'
 GDA_PROJECT_NAME = '0473_200421_006_2020_10052_GDA_2020'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # # [ ECLAIMS VARIABLE ]
 # ECLAIMS_PROJECT_ID = '5db144de27f919001f5f25e5'
@@ -134,6 +137,19 @@ GDA_PROJECT_NAME = '0473_200421_006_2020_10052_GDA_2020'
 # MVL_STP_OCR_TRANS_DIR = 'trans/'
 # MVL_STP_OCR_PERFORMANCE_DIR = 'performance/'
 # MVL_STP_OCR_BACKUP_DIR = MVL_STP_OCR_PROJECT_NAME + '/'
+
+
+
+
+
+
+# # ECLAIM TABLE
+# DWH_DIM_FIELD_ECLAIMS_TABLE = 'dim_field_' + ECLAIMS_PROJECT_ID
+# DWH_DIM_REMARK_ECLAIMS_TABLE = 'dim_remark_' + ECLAIMS_PROJECT_ID
+# DWH_DIM_WORKING_TIME_ECLAIMS_TABLE = 'dim_working_time_' + ECLAIMS_PROJECT_ID
+# DWH_FACT_ACCURACY_ECLAIMS_TABLE = 'fact_accuracy_' + ECLAIMS_PROJECT_ID
+# DWH_FACT_DOCUMENT_ECLAIMS_TABLE = 'fact_document_' + ECLAIMS_PROJECT_ID
+# DWH_FACT_PROCESS_ECLAIMS_TABLE = 'fact_process_' + ECLAIMS_PROJECT_ID
 
 
 
