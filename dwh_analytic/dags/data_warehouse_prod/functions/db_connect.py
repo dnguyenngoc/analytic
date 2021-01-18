@@ -39,6 +39,14 @@ class EngineConnect:
         else:
             return rows[0]
     
+    def get_one_data_by_field_name_and_value(self, field: str, value: str, schema: str, table: str):
+        result = self.conn.execute("""select * from {schema}."{table}" where {field} = '{value}';""".format(schema=schema, table=table, field=field, value=value))
+        rows = result.fetchone()
+        if len(rows) == 0:
+            return None
+        else:
+            return {**rows}
+        
     def close(self):
         self.engine.dispose()
         

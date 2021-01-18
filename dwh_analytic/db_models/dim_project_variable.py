@@ -18,9 +18,10 @@ class DimProjectVariable(Base):
     project_docs_dir = Column(String(255), nullable=True, default=None)
     project_trans_dir = Column(String(255), nullable=True, default=None)
     project_performance_dir = Column(String(255), nullable=False)
+    project_field_dir = Column(String(255), nullable=False)
     backup_file_type = Column(String(255), nullable=True, default='.pickle')
-    schedule = Column(String(255), nullable=True, default=None)
+    schedule_type = Column(String(255), nullable=True, default=None)
     schedule_date_key = Column(Integer, nullable=True, default=None)
-    sechedule_time_key = Column(Integer, nullable=True, default=None)
+    schedule_time_key = Column(Integer, nullable=True, default=None)
     
     __table_args__ = {"schema": "dwh_development_analytic"}

@@ -11,7 +11,7 @@ from sqlalchemy import pool
 from alembic import context
 
 # DB models
-from db_models import dim_project_variable, dim_field, dim_process, fact_data_extraction, fact_document, fact_etl_report
+from db_models import dim_field, dim_process, fact_data_extraction, fact_document, fact_etl_report, fact_performance, dim_project_variable
 from db_models.base_class import Base
 from dags.data_warehouse_prod.settings import config as environments
 
