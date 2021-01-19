@@ -15,10 +15,16 @@ from db_models import dim_field, dim_process, fact_data_extraction, fact_documen
 from db_models.base_class import Base
 from dags.data_warehouse_prod.settings import config as environments
 
-
 config = context.config
-config.set_main_option("sqlalchemy.url", environments.DWH_SQLALCHEMY_URI)
-print(environments.DWH_SQLALCHEMY_URI)
+
+user = 'etl_airflow'
+pw = '18(./17DWH_3tl)'
+host = 'dbdd-rd-dwh.digi-texx.vn'
+port = '5432'
+database = 'dwhdb'
+SQLALCHEMY_URI = "postgresql+psycopg2://{user}:{pw}@{host}:{port}/{db}".format(user=user, pw=pw, host=host, port=port, db=database)
+
+config.set_main_option("sqlalchemy.url", SQLALCHEMY_URI)
 
 fileConfig(config.config_file_name)
 
