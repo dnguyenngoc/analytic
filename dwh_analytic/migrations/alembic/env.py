@@ -17,9 +17,14 @@ from dags.data_warehouse_prod.settings import config as environments
 
 config = context.config
 
-user = 'etl_airflow'
-pw = '18(./17DWH_3tl)'
-host = 'dbdd-rd-dwh.digi-texx.vn'
+# user = 'etl_airflow'
+# pw = '18(./17DWH_3tl)'
+# host = 'dbdd-rd-dwh.digi-texx.vn'
+# port = '5432'
+# database = 'dwhdb'
+user = 'admin'
+pw = '1q2w3e4r'
+host = '127.0.0.1'
 port = '5432'
 database = 'dwhdb'
 SQLALCHEMY_URI = "postgresql+psycopg2://{user}:{pw}@{host}:{port}/{db}".format(user=user, pw=pw, host=host, port=port, db=database)

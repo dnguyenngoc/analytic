@@ -1,8 +1,8 @@
 """Auto migration
 
-Revision ID: 234123af877e
+Revision ID: 9ef4946a8af8
 Revises: 
-Create Date: 2021-01-18 17:31:24.401055
+Create Date: 2021-01-19 14:35:44.696757
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = '234123af877e'
+revision = '9ef4946a8af8'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -25,6 +25,10 @@ def upgrade():
     sa.Column('control_type', sa.String(length=255), nullable=True),
     sa.Column('default_value', sa.String(length=255), nullable=True),
     sa.Column('counted_character', sa.Boolean(), nullable=False),
+    sa.Column('counted_character_date_from_key', sa.Integer(), nullable=False),
+    sa.Column('counted_character_time_from_key', sa.Integer(), nullable=False),
+    sa.Column('counted_character_date_to_key', sa.Integer(), nullable=False),
+    sa.Column('counted_character_time_to_key', sa.Integer(), nullable=False),
     sa.Column('is_sub_field', sa.Boolean(), nullable=False),
     sa.PrimaryKeyConstraint('field_key'),
     schema='dwh_development_analytic'
@@ -70,7 +74,6 @@ def upgrade():
     sa.Column('data_extraction_key', sa.BigInteger(), nullable=False),
     sa.Column('performance_key', sa.BigInteger(), nullable=True),
     sa.Column('document_key', sa.BigInteger(), nullable=True),
-    sa.Column('project_name', sa.String(length=255), nullable=False),
     sa.Column('ori_document_id', sa.String(length=255), nullable=True),
     sa.Column('project_id', sa.String(length=255), nullable=False),
     sa.Column('document_id', sa.String(length=255), nullable=True),
