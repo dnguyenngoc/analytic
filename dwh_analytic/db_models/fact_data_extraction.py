@@ -5,7 +5,7 @@ from db_models.base_class import Base
 class FactDataExtraction(Base):
 
     __tablename__ = "fact_data_extraction"
-    data_extraction_key = Column(BigInteger,  primary_key=True, index=True)
+    data_extraction_key = Column(BigInteger,  primary_key=True)
     performance_key = Column(BigInteger, nullable=True)
     document_key = Column(BigInteger, index=True)
     ori_document_id = Column(String(255), nullable=True, default=None)

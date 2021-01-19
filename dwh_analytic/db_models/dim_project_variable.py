@@ -4,7 +4,7 @@ from db_models.base_class import Base
 
 class DimProjectVariable(Base):
     __tablename__ = "dim_project_variable"
-    project_id = Column(String(255),  primary_key=True, index=True)
+    project_id = Column(String(255),  primary_key=True)
     project_name = Column(String(255), nullable=False)
     docs_collection_name = Column(String(255), nullable=True, default=None)
     trans_collection_name = Column(String(255), nullable=True, default=None)

@@ -16,14 +16,22 @@ def int_to_bool(data: int):
 def bson_object_to_string(name):
     return str(name)
 
-
 def time_to_date_key(data: datetime):
     day = data.day
+    month = data.month
+    if month < 10:
+        month = '0' + str(month)
     if day < 10:
         day = '0'+ str(day)
     return int(str(data.year)+str(data.month)+str(day))
 
 def time_to_time_key(data: datetime):
+    minute = data.minute
+    second = data.second
+    if minute < 10:
+        minute = '0' + str(minute)
+    if second < 10:
+        second = '0'+ str(second)
     end = str(data.hour) + str(data.minute) + str(data.second)
     return int(end)
 
@@ -41,13 +49,17 @@ def get_process_key_performance_gda(module, task):
             return 3
         elif task.startswith('Proof'):
             return 5
+        else:
+            return 13
     elif module == 'qc':
         return 8
     elif module == 'approve_qc':
         return 9
-    elif task=='Verify_Hold_Type':
+    elif module == 'verify_hold':
         return 12
-        
+    else:
+        return 14
+    
 def get_working_type_id_by_name(name: str):
     if name == 'In WorkShift':
         return 1
@@ -122,3 +134,24 @@ def created_date_of_docs_by_id(id: str, list_created: list):
             end = item['created_date']
             break
     return end
+
+
+def handle_query_variable(query_db: str):
+    return query_db
+
+def check_dim_field_run(data: datetime):
+    if data.day == 1:
+        return True
+    else: return False
+
+# def get_start_date_key_to_of_month(data: datetime):
+#     month = data.month
+#     if month < 10:
+#         month = '0' + str(month)
+#     return str(data.year) + str(month)+ '01'
+
+# def get_start_time_key_of_month(data: datetime):
+#     return '0'
+
+# def get_end_date_key_of_month(data: datetime):
+#     return '23:00:00'

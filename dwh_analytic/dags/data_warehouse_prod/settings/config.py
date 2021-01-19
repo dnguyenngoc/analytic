@@ -37,9 +37,14 @@ BACKUP_FILE_TYPE = '.pickle'
 #==================================================================================================================================
 #                                                                                                                      [DWH CONFIG]
 #==================================================================================================================================
-DWH_USER = 'admin'
-DWH_PASSWORD = '1q2w3e4r'
-DWH_HOST = '127.0.0.1'
+# DWH_USER = 'admin'
+# DWH_PASSWORD = '1q2w3e4r'
+# DWH_HOST = '127.0.0.1'
+# DWH_PORT = '5432'
+# DWH_DATABASE = 'dwhdb'
+DWH_USER = 'duynn_1'
+DWH_PASSWORD = '9ajMnBiU1;j'
+DWH_HOST = 'dbdd-rd-dwh.digi-texx.vn'
 DWH_PORT = '5432'
 DWH_DATABASE = 'dwhdb'
 EHR_URL_USER_INFOR = 'https://ehr.digi-texx.vn/api/interaction'

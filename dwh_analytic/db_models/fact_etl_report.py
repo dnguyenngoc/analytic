@@ -4,7 +4,7 @@ from db_models.base_class import Base
 
 class FactEtlReport(Base):
     __tablename__ = "fact_etl_report"
-    report_key = Column(Integer,  primary_key=True, index=True)
+    report_key = Column(Integer,  primary_key=True)
     project_id = Column(String(255), nullable=False)
     job_name = Column(String(255), nullable=False)
     schedule_type = Column(String(255), nullable=False)

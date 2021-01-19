@@ -4,7 +4,7 @@ from db_models.base_class import Base
 
 class DimProcess(Base):
     __tablename__ = "dim_process"
-    process_key = Column(Integer,  primary_key=True, index=True)
+    process_key = Column(Integer,  primary_key=True)
     module = Column(String(255), nullable=True, default=None)
     type = Column(String(255), nullable=True, default=None)
     step = Column(String(255), nullable=True, default=None)

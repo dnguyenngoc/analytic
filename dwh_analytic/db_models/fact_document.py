@@ -4,7 +4,7 @@ from db_models.base_class import Base
 
 class FactDocument(Base):
     __tablename__ = "fact_document"
-    document_key = Column(BigInteger,  primary_key=True, index=True)
+    document_key = Column(BigInteger,  primary_key=True)
     ori_document_id = Column(String(255), nullable=False)
     project_id = Column(String(255), nullable=False)
     document_id = Column(String(255), nullable=False)

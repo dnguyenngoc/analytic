@@ -4,7 +4,7 @@ from db_models.base_class import Base
 
 class FactPerformance(Base):
     __tablename__ = "fact_performance"
-    performance_key = Column(BigInteger,  primary_key=True, index=True)
+    performance_key = Column(BigInteger,  primary_key=True)
     document_key = Column(BigInteger, nullable=True, default=None)
     ori_performance_id = Column(String(255), nullable=False)
     group_id = Column(String(255), nullable=True, default=None)
